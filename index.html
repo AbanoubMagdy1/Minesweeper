@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #ddd;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .game{
+            width: 400px;
+            height: 80vh;
+            min-height: 400px;
+        }
+        
+        img{
+            height: 60%;
+            width: 60%;
+            object-fit: cover;
+        }
+        .box{
+            width: 20%;
+            height: 10%;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 31px;
+            cursor: pointer;
+            background-color: #666;
+            border: 1px solid white;
+            box-shadow: inset 5px 5px 0 0 #888, inset -5px -5px 0 0 #444;
+        }
+        .box:active{
+            box-shadow: none;
+        }
+        .box.clicked{
+            cursor:inherit;
+            background-color: #ccc;
+            box-shadow: none;
+        }
+        h1{
+            text-align: center;
+        }
+        .header{
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        button{
+            font-size: 24px;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button class="easy">Easy</button>
+        <h1></h1>
+        <button class="hard">Hard</button>
+    </div>
+    <div class="game"></div>
+    <h2>Game status</h2>
+    <script src="main.js"></script>
+</body>
+</html>
